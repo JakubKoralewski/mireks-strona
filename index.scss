@@ -22,7 +22,7 @@ main {
 $startStuffHeight: 0px;
 $endStuffHeight: 500px;
 $startStuffColor: rgba(0, 0, 0, 0);
-$endStuffColor: rgba(0, 0, 0, 0.7);
+$endStuffColor: rgba(0, 0, 0, 0.1);
 
 @keyframes stuffRollDown {
   from {
@@ -37,10 +37,16 @@ $endStuffColor: rgba(0, 0, 0, 0.7);
 
 #stuff {
   animation-name: stuffRollDown;
-  animation-delay: 0s;
+  animation-delay: 1s;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  overflow: hidden;
+  border-radius: 10px;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
   span {
     display: flex;
     align-self: auto;
