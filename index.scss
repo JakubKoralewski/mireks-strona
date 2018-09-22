@@ -1,0 +1,48 @@
+$primary-color: rgb(0, 162, 255);
+$margin: 10vw;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: $primary-color;
+}
+#bm {
+  margin: 0 auto;
+  padding: 0 $margin;
+  max-width: 410px;
+  max-height: 217px;
+}
+
+main {
+  margin: 0 $margin;
+}
+
+$startStuffHeight: 0px;
+$endStuffHeight: 500px;
+$startStuffColor: rgba(0, 0, 0, 0);
+$endStuffColor: rgba(0, 0, 0, 0.7);
+
+@keyframes stuffRollDown {
+  from {
+    height: $startStuffHeight;
+    background-color: $startStuffColor;
+  }
+  to {
+    background-color: $endStuffColor;
+    height: $endStuffHeight;
+  }
+}
+
+#stuff {
+  animation-name: stuffRollDown;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  span {
+    display: flex;
+    align-self: auto;
+  }
+}
